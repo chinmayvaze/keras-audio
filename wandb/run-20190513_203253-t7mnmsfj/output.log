@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "train-lstm.py", line 40, in <module>
+    reshape_out = Reshape((config.buckets, config.max_len))(inp)
+NameError: name 'Reshape' is not defined

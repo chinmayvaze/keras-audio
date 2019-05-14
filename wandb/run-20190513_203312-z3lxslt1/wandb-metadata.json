@@ -1,0 +1,24 @@
+{
+    "root": "/home/chinmayvaze/keras-audio",
+    "git": {
+        "remote": "https://github.com/lukas/keras-audio",
+        "commit": "faf322cf74555902529240c078a58fd418bea73e"
+    },
+    "email": "chinmayvaze@gmail.com",
+    "startedAt": "2019-05-13T20:33:12.252343",
+    "host": "jupyter-chinmayvaze",
+    "username": "chinmayvaze",
+    "os": "Linux-4.14.91+-x86_64-with-Ubuntu-18.04-bionic",
+    "python": "3.6.7",
+    "gpu": "Tesla K80",
+    "gpu_count": 1,
+    "cpu_count": 16,
+    "program": "train-lstm.py",
+    "cuda": "10.0.130",
+    "args": [],
+    "state": "failed",
+    "heartbeatAt": "2019-05-13T20:33:16.281690",
+    "jobType": null,
+    "mode": "run",
+    "exitcode": 1
+}

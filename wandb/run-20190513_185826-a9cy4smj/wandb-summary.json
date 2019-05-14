@@ -1,0 +1,374 @@
+{
+    "graph": {
+        "_type": "graph",
+        "format": "keras",
+        "nodes": [
+            {
+                "name": "input_1",
+                "id": "input_1",
+                "class_name": "InputLayer",
+                "output_shape": [
+                    null,
+                    20,
+                    11,
+                    1
+                ],
+                "num_parameters": 0
+            },
+            {
+                "name": "conv2d_1",
+                "id": "conv2d_1",
+                "class_name": "Conv2D",
+                "output_shape": [
+                    null,
+                    20,
+                    11,
+                    1
+                ],
+                "num_parameters": 2
+            },
+            {
+                "name": "conv2d_2",
+                "id": "conv2d_2",
+                "class_name": "Conv2D",
+                "output_shape": [
+                    null,
+                    20,
+                    11,
+                    1
+                ],
+                "num_parameters": 10
+            },
+            {
+                "name": "conv2d_3",
+                "id": "conv2d_3",
+                "class_name": "Conv2D",
+                "output_shape": [
+                    null,
+                    20,
+                    11,
+                    1
+                ],
+                "num_parameters": 16
+            },
+            {
+                "name": "max_pooling2d_1",
+                "id": "max_pooling2d_1",
+                "class_name": "MaxPooling2D",
+                "output_shape": [
+                    null,
+                    20,
+                    11,
+                    1
+                ],
+                "num_parameters": 0
+            },
+            {
+                "name": "concatenate_1",
+                "id": "concatenate_1",
+                "class_name": "Concatenate",
+                "output_shape": [
+                    null,
+                    20,
+                    11,
+                    4
+                ],
+                "num_parameters": 0
+            },
+            {
+                "name": "max_pooling2d_2",
+                "id": "max_pooling2d_2",
+                "class_name": "MaxPooling2D",
+                "output_shape": [
+                    null,
+                    10,
+                    5,
+                    4
+                ],
+                "num_parameters": 0
+            },
+            {
+                "name": "conv2d_4",
+                "id": "conv2d_4",
+                "class_name": "Conv2D",
+                "output_shape": [
+                    null,
+                    10,
+                    5,
+                    1
+                ],
+                "num_parameters": 5
+            },
+            {
+                "name": "conv2d_5",
+                "id": "conv2d_5",
+                "class_name": "Conv2D",
+                "output_shape": [
+                    null,
+                    10,
+                    5,
+                    1
+                ],
+                "num_parameters": 37
+            },
+            {
+                "name": "conv2d_6",
+                "id": "conv2d_6",
+                "class_name": "Conv2D",
+                "output_shape": [
+                    null,
+                    10,
+                    5,
+                    1
+                ],
+                "num_parameters": 61
+            },
+            {
+                "name": "max_pooling2d_3",
+                "id": "max_pooling2d_3",
+                "class_name": "MaxPooling2D",
+                "output_shape": [
+                    null,
+                    10,
+                    5,
+                    4
+                ],
+                "num_parameters": 0
+            },
+            {
+                "name": "concatenate_2",
+                "id": "concatenate_2",
+                "class_name": "Concatenate",
+                "output_shape": [
+                    null,
+                    10,
+                    5,
+                    7
+                ],
+                "num_parameters": 0
+            },
+            {
+                "name": "batch_normalization_1",
+                "id": "batch_normalization_1",
+                "class_name": "BatchNormalization",
+                "output_shape": [
+                    null,
+                    10,
+                    5,
+                    7
+                ],
+                "num_parameters": 28
+            },
+            {
+                "name": "flatten_1",
+                "id": "flatten_1",
+                "class_name": "Flatten",
+                "output_shape": [
+                    null,
+                    350
+                ],
+                "num_parameters": 0
+            },
+            {
+                "name": "dense_1",
+                "id": "dense_1",
+                "class_name": "Dense",
+                "output_shape": [
+                    null,
+                    128
+                ],
+                "num_parameters": 44928
+            },
+            {
+                "name": "dropout_1",
+                "id": "dropout_1",
+                "class_name": "Dropout",
+                "output_shape": [
+                    null,
+                    128
+                ],
+                "num_parameters": 0
+            },
+            {
+                "name": "dense_2",
+                "id": "dense_2",
+                "class_name": "Dense",
+                "output_shape": [
+                    null,
+                    64
+                ],
+                "num_parameters": 8256
+            },
+            {
+                "name": "dropout_2",
+                "id": "dropout_2",
+                "class_name": "Dropout",
+                "output_shape": [
+                    null,
+                    64
+                ],
+                "num_parameters": 0
+            },
+            {
+                "name": "dense_3",
+                "id": "dense_3",
+                "class_name": "Dense",
+                "output_shape": [
+                    null,
+                    3
+                ],
+                "num_parameters": 195
+            }
+        ],
+        "edges": [
+            [
+                "input_1",
+                "conv2d_1"
+            ],
+            [
+                "input_1",
+                "conv2d_2"
+            ],
+            [
+                "input_1",
+                "conv2d_3"
+            ],
+            [
+                "input_1",
+                "max_pooling2d_1"
+            ],
+            [
+                "conv2d_1",
+                "concatenate_1"
+            ],
+            [
+                "conv2d_2",
+                "concatenate_1"
+            ],
+            [
+                "conv2d_3",
+                "concatenate_1"
+            ],
+            [
+                "max_pooling2d_1",
+                "concatenate_1"
+            ],
+            [
+                "concatenate_1",
+                "max_pooling2d_2"
+            ],
+            [
+                "max_pooling2d_2",
+                "conv2d_4"
+            ],
+            [
+                "max_pooling2d_2",
+                "conv2d_5"
+            ],
+            [
+                "max_pooling2d_2",
+                "conv2d_6"
+            ],
+            [
+                "max_pooling2d_2",
+                "max_pooling2d_3"
+            ],
+            [
+                "conv2d_4",
+                "concatenate_2"
+            ],
+            [
+                "conv2d_5",
+                "concatenate_2"
+            ],
+            [
+                "conv2d_6",
+                "concatenate_2"
+            ],
+            [
+                "max_pooling2d_3",
+                "concatenate_2"
+            ],
+            [
+                "concatenate_2",
+                "batch_normalization_1"
+            ],
+            [
+                "batch_normalization_1",
+                "flatten_1"
+            ],
+            [
+                "flatten_1",
+                "dense_1"
+            ],
+            [
+                "dense_1",
+                "dropout_1"
+            ],
+            [
+                "dropout_1",
+                "dense_2"
+            ],
+            [
+                "dense_2",
+                "dropout_2"
+            ],
+            [
+                "dropout_2",
+                "dense_3"
+            ]
+        ]
+    },
+    "_step": 49,
+    "_timestamp": 1557773932.777201,
+    "_runtime": 26.470252990722656,
+    "loss": 0.04699050952203974,
+    "val_loss": 0.42225660725365716,
+    "acc": 0.9826478218817772,
+    "val_acc": 0.8969171542193389,
+    "examples": {
+        "width": 11,
+        "height": 20,
+        "count": 36,
+        "_type": "images",
+        "captions": [
+            "bed",
+            "bed",
+            "bed",
+            "bed",
+            "cat",
+            "happy",
+            "happy",
+            "bed",
+            "bed",
+            "bed",
+            "bed",
+            "bed",
+            "bed",
+            "bed",
+            "cat",
+            "happy",
+            "cat",
+            "happy",
+            "cat",
+            "cat",
+            "bed",
+            "happy",
+            "bed",
+            "bed",
+            "cat",
+            "cat",
+            "bed",
+            "cat",
+            "cat",
+            "happy",
+            "cat",
+            "bed",
+            "bed",
+            "happy",
+            "happy",
+            "bed"
+        ]
+    },
+    "epoch": 49
+}
